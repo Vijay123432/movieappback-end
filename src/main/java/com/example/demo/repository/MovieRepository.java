@@ -28,6 +28,6 @@ public interface MovieRepository extends JpaRepository<movie, Long> {
     
     @Query("from movie ")
     List<movie> findallMovies();
-
+    
     
 }
