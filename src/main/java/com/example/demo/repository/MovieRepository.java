@@ -21,7 +21,7 @@ public interface MovieRepository extends JpaRepository<movie, Long> {
     List<movie> findByIsPopularTrue();
 
     @Query("select m from movie m where m.relesedate >= :today")
-    List<movie> findUpMovies(@Param("today")String today);
+    List<movie> findUpMovies(@Param("today")LocalDate today);
 
     @Query("select m from movie m where m.relesedate >= :today order by m.relesedate desc")
     List<movie> findUpcomingMoviesDescending(@Param("today")LocalDate today);

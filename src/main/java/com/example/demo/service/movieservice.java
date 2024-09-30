@@ -3,6 +3,7 @@ package com.example.demo.service;
 import com.example.demo.entity.movie;
 import com.example.demo.repository.MovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.util.List;
@@ -32,4 +33,19 @@ public class movieservice {
     public List<movie> searchallMovies() {
         return movieRepository.findallMovies();
     }
+    public movie findByname(String name){
+    return movieRepository.findByname(name);
+    }
+    public List<movie> serchname(String name){
+        return movieRepository.Search(name);
+        }
+    public List<movie> gettodayMovies() {
+        LocalDate id=LocalDate.now();
+        return  movieRepository.findUpMovies(id);
+    }
+    public List<movie> getUpdatrdMovies(){
+        LocalDate ld=LocalDate.now();
+        return movieRepository.findUpcomingMoviesDescending(ld);
+    }
+
 }
