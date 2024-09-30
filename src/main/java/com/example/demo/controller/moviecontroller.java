@@ -29,4 +29,9 @@ public class moviecontroller {
     public List<movie> saved(@RequestBody List<movie> movieservice ){
      return movieService.saved(movieservice);
     }
+    @GetMapping("/allmovies")
+    public List<movie> searchAllMovies() {
+        return movieService.searchallMovies();
+}
+
 }

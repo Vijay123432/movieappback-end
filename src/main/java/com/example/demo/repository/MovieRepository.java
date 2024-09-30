@@ -25,4 +25,9 @@ public interface MovieRepository extends JpaRepository<movie, Long> {
 
     @Query("select m from movie m where m.relesedate >= :today order by m.relesedate desc")
     List<movie> findUpcomingMoviesDescending(@Param("today")LocalDate today);
+    
+    @Query("from movie ")
+    List<movie> findallMovies();
+
+    
 }

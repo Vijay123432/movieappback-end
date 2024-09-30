@@ -29,4 +29,7 @@ public class movieservice {
 
         return movieRepository.saveAll(moviesirvice);
     }
+    public List<movie> searchallMovies() {
+        return movieRepository.findallMovies();
+    }
 }
