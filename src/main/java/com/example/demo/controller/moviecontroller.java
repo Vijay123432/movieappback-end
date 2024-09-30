@@ -26,7 +26,7 @@ public class moviecontroller {
         return movieService.getMoviesByGenre(genre);
     }
     @PostMapping("save")
-    public movie saved(@RequestBody movie movieservice ){
+    public List<movie> saved(@RequestBody List<movie> movieservice ){
      return movieService.saved(movieservice);
     }
 }

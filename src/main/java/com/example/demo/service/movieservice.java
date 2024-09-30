@@ -25,8 +25,8 @@ public class movieservice {
         return movieRepository.findByGenre(genre);
     }
 
-    public movie saved(movie ms) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'saved'");
+    public List<movie> saved(List<movie> moviesirvice) {
+
+        return movieRepository.saveAll(moviesirvice);
     }
 }

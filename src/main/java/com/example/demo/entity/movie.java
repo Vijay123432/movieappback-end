@@ -21,7 +21,7 @@ public class movie {
     private LocalDate relesedate;
 
     
-    public movie() {
+     public movie() {
 
     }
     public movie(Long id, String title, String genre, boolean isPopular, String poster, LocalDate relesedate) {
