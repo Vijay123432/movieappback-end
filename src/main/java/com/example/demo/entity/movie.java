@@ -19,56 +19,78 @@ public class movie {
     private boolean isPopular;
     private String poster;
     private LocalDate relesedate;
+    private float rating;
 
     
      public movie() {
 
     }
-    public movie(Long id, String title, String genre, boolean isPopular, String poster, LocalDate relesedate) {
+   
+    public movie(Long id, String title, String genre, boolean isPopular, String poster, LocalDate relesedate,
+            float rating) {
         this.id = id;
         this.title = title;
         this.genre = genre;
         this.isPopular = isPopular;
         this.poster = poster;
         this.relesedate = relesedate;
+        this.rating = rating;
     }
+
     public Long getId() {
         return id;
     }
+
     public void setId(Long id) {
         this.id = id;
     }
+
     public String getTitle() {
         return title;
     }
+
     public void setTitle(String title) {
         this.title = title;
     }
+
     public String getGenre() {
         return genre;
     }
+
     public void setGenre(String genre) {
         this.genre = genre;
     }
+
     public boolean isPopular() {
         return isPopular;
     }
+
     public void setPopular(boolean isPopular) {
         this.isPopular = isPopular;
     }
+
     public String getPoster() {
         return poster;
     }
+
     public void setPoster(String poster) {
         this.poster = poster;
     }
+
     public LocalDate getRelesedate() {
         return relesedate;
     }
+
     public void setRelesedate(LocalDate relesedate) {
         this.relesedate = relesedate;
     }
 
+    public float getRating() {
+        return rating;
+    }
 
+    public void setRating(float rating) {
+        this.rating = rating;
+    }
    
 }
